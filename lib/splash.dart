@@ -11,10 +11,21 @@ class splash extends StatefulWidget {
 class splash_State extends State<splash> {
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return AnimatedSplashScreen(
         splash: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start
+          ,
+
           children: [
-            Image.asset('images/splash.jpg'),
+          Container(
+            child: Image.asset('',
+              height: height,
+              width: width/2,
+            ),
+          ),
           ],
         ),
         nextScreen: read_page(),
